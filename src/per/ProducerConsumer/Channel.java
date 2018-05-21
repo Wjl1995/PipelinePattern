@@ -1,0 +1,18 @@
+package per.ProducerConsumer;
+
+public interface Channel<P> {
+
+	/**
+	 * 从通道中取出一个产品
+	 * @return "产品"
+	 * @throws InterruptedException
+	 */
+	P take() throws InterruptedException;
+	
+	/**
+	 * 往通道中存储一个产品
+	 * @param product
+	 * @throws InterruptedException
+	 */
+	void put (P product) throws InterruptedException;
+}
